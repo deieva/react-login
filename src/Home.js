@@ -1,7 +1,5 @@
-
-
 import React from "react";
-import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn } from 'mdbreact';
+import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBIcon } from 'mdbreact';
 
 const Home = () => {
 return (
@@ -9,20 +7,37 @@ return (
   <MDBRow>
     <MDBCol md="6">
       <form>
-        <p className="h5 text-center mb-4">Sign in</p>
-        <div className="grey-text">
-          <MDBInput label="Type your email" icon="envelope" group type="email" validate error="wrong"
-            success="right" />
-          <MDBInput label="Type your password" icon="lock" group type="password" validate />
-        </div>
-        <div className="text-center">
-          <MDBBtn>Login</MDBBtn>
-        </div>
-      </form>
-    </MDBCol>
-  </MDBRow>
-</MDBContainer>
-);
-};
+        <p className="h4 text-center mb-4">Write to us</p>
+        <label htmlFor="defaultFormContactNameEx" className="grey-text">
+          Your name
+        </label>
+        <input type="text" id="defaultFormContactNameEx" className="form-control" />
+        <br />
+        <label htmlFor="defaultFormContactEmailEx" className="grey-text">
+          Your email
+        </label>
+        <input type="email" id="defaultFormContactEmailEx" className="form-control" />
+        <br />
+        <label htmlFor="defaultFormContactSubjectEx" className="grey-text">
+          Subject
+        </label>
+        <input type="text" id="defaultFormContactSubjectEx" className="form-control" />
+        <br />
+        <label htmlFor="defaultFormContactMessageEx" className="grey-text">
+          Your message
+        </label>
+        <textarea type="text" id="defaultFormContactMessageEx" className="form-control" rows="3" />
+        <div className="text-center mt-4">
+                  <MDBBtn color="warning" outline type="submit">
+                    Send
+                    <MDBIcon far icon="paper-plane" className="ml-2" />
+                  </MDBBtn>
+                </div>
+              </form>
+            </MDBCol>
+          </MDBRow>
+        </MDBContainer>
+      );
+    };
 
-export default Home;
+    export default Home;
